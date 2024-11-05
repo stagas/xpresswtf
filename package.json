@@ -8,6 +8,7 @@
   "main": "src/index.ts",
   "scripts": {
     "test": "echo ok",
+    "build": "esbuild public/client.ts --bundle --minify --sourcemap=inline --outfile=public/client.js",
     "dev:api": "deno --watch --unstable-kv -A api/server.ts"
   },
   "devDependencies": {
