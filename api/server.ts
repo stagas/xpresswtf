@@ -97,7 +97,8 @@ Deno.serve(options, async req => {
     }
 
     case '/':
-      ctx.url.pathname = 'index.html'
+      ctx.url.pathname = IS_DEV ? 'index-dev.html' : 'index.html'
+
     /* fallthrough */
     default:
       return files('public/')(ctx)

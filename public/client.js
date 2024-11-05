@@ -1,0 +1,2 @@
+"use strict";(()=>{document.body.innerHTML="hello fuckin world";})();
+//# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsiY2xpZW50LnRzIl0sCiAgInNvdXJjZXNDb250ZW50IjogWyJkb2N1bWVudC5ib2R5LmlubmVySFRNTCA9IGBoZWxsbyBmdWNraW4gd29ybGRgXG4iXSwKICAibWFwcGluZ3MiOiAibUJBQUEsU0FBUyxLQUFLLFVBQVkiLAogICJuYW1lcyI6IFtdCn0K
