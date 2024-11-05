@@ -6,6 +6,7 @@ document.body.innerHTML = /*html*/`
   <a href="#">phots</a>
   <a href="#">vids</a>
   <a href="#">snds</a>
+  <a href="#">wtfs</a>
 </div>
 
 `
