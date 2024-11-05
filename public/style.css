@@ -36,3 +36,16 @@ body {
     padding: 10px;
   }
 }
+
+.nav a:hover {
+  background: #fff2;
+}
+@media screen and (max-width: 600px) {
+  .logo {
+    font-size: 48pt;
+    height: 150px;
+  }
+  .nav {
+    gap: 0px;
+  }
+}
