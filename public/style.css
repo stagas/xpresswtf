@@ -30,16 +30,16 @@ body {
   text-shadow: 0px 3px #000;
   border-bottom: 3px solid #020;
 
-  & a {
-    color: #8f8;
+  a {
     text-decoration: none;
     padding: 10px;
+
+    &:hover {
+      background: #fff2;
+    }
   }
 }
 
-.nav a:hover {
-  background: #fff2;
-}
 @media screen and (max-width: 600px) {
   .logo {
     font-size: 48pt;

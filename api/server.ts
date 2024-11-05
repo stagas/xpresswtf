@@ -23,7 +23,7 @@ const options: Record<string, string> = IS_DEV
 options.port = args.port ?? '8000'
 
 const buildCache = new Map<string, Uint8Array>()
-let watcher: Deno.FsWatcher
+const watchers: Deno.FsWatcher[] = []
 
 Deno.serve(options, async req => {
   const ctx: Context = {
@@ -68,8 +68,11 @@ Deno.serve(options, async req => {
     case '/reload': {
       const body = new ReadableStream({
         start(controller) {
-          watcher?.close()
-          watcher = Deno.watchFs(['public/', 'api/']);
+          const watcher = Deno.watchFs(['public/', 'api/'])
+          watchers.push(watcher)
+          if (watchers.length > 5) {
+            watchers.shift()!.close()
+          }
 
           (async () => {
             for await (const event of watcher) {
