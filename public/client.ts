@@ -2,11 +2,11 @@ document.body.innerHTML = /*html*/`
 <div class="logo">xpress.wtf</div>
 
 <div class="nav">
-  <a href="#">txts</a>
-  <a href="#">phots</a>
-  <a href="#">vids</a>
-  <a href="#">snds</a>
-  <a href="#">wtfs</a>
+  <a href="#">hang</a>
+  <a href="#">show</a>
+  <a href="#">tell</a>
+  <a href="#">rant</a>
+  <a href="#">wtf</a>
 </div>
 
 `
