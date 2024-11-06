@@ -1,6 +1,8 @@
 body {
   background: #121;
   color: #fff;
+  padding: 0;
+  margin: 0;
   font-family: "Work Sans", sans-serif;
 }
 
@@ -22,6 +24,7 @@ body {
 .nav {
   display: flex;
   flex-flow: row wrap;
+  padding: 0 10px;
   gap: 20px;
   justify-content: space-evenly;
   background: #040;
@@ -31,11 +34,35 @@ body {
   border-bottom: 3px solid #020;
 
   a {
+    position: relative;
     text-decoration: none;
     padding: 10px;
 
     &:hover {
       background: #fff2;
+    }
+
+    &.active {
+      background: #fff2;
+    }
+
+    .nots {
+      position: absolute;
+      color: #220;
+      text-shadow: none;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 3px;
+      letter-spacing: 0;
+      font-size: 6pt;
+      border-radius: 100%;
+      background: #fd5;
+      box-shadow: 0px 2.5px 0px #220;
+
+      &.zero {
+        background: #ff74;
+      }
     }
   }
 }
