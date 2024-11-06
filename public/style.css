@@ -1,19 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+input {
+  font-family: "Work Sans", sans-serif;
+}
+
 body {
   background: #121;
   color: #fff;
   padding: 0;
   margin: 0;
-  font-family: "Work Sans", sans-serif;
 }
 
 .logo {
+  position: sticky;
+  top: 0;
   font-family: "Honk", monospace;
   font-size: 58pt;
   font-variation-settings: "MORF" 0, "SHLN" 50;
   line-height: 0;
   text-align: center;
   width: 100%;
-  height: 200px;
+  height: 110px;
+  padding-bottom: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,21 +33,25 @@ body {
 }
 
 .nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   display: flex;
   flex-flow: row wrap;
   padding: 0 10px;
   gap: 20px;
   justify-content: space-evenly;
   background: #040;
-  letter-spacing: 2px;
-  font-weight: 500;
-  text-shadow: 0px 3px #000;
+  letter-spacing: 2.5px;
+  font-size: 10pt;
+  font-weight: 700;
+  text-shadow: 0px 2px #000;
   border-bottom: 3px solid #020;
 
   a {
     position: relative;
     text-decoration: none;
-    padding: 10px;
+    padding: 12px 10px 4px;
 
     &:hover {
       background: #fff2;
@@ -50,7 +65,7 @@ body {
       position: absolute;
       color: #220;
       text-shadow: none;
-      top: -10px;
+      top: -6px;
       left: 50%;
       transform: translateX(-50%);
       padding: 3px;
@@ -67,10 +82,97 @@ body {
   }
 }
 
+.msgs {
+  display: flex;
+  width: 100%;
+  flex-flow: column nowrap;
+  font-size: 9pt;
+  align-items: flex-start;
+  justify-content: stretch;
+
+  .msg {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 0 3px;
+    width: 100%;
+    line-height: 1.05em;
+    align-items: stretch;
+    justify-content: flex-end;
+
+    .time {
+      font-size: 8pt;
+      text-align: right;
+      color: #565;
+      padding: 0 5px;
+      padding-top: 0.25px;
+    }
+
+    .nick {
+      white-space: nowrap;
+      font-weight: 600;
+      color: #4ff;
+      min-width: 18%;
+      max-width: 18%;
+      text-align: right;
+      padding-right: 3px;
+      border-right: 0.5px solid #775;
+    }
+
+    .text {
+      flex: 1;
+      color: #eec;
+      padding-bottom: 4px;
+      padding-right: 5px;
+    }
+
+    &:first-child * {
+      padding-top: 5px;
+    }
+
+    &:last-child * {
+      padding-bottom: 85px;
+    }
+  }
+}
+
+.input {
+  position: fixed;
+  bottom: 28px;
+  display: flex;
+  width: 100%;
+  flex-flow: row nowrap;
+  align-items: center;
+  background: #121;
+  padding: 0 0 10px;
+
+  .nick {
+    font-size: 11pt;
+    font-weight: 600;
+    padding: 0 5px;
+  }
+
+  input {
+    border: 1px solid #775;
+    flex: 1;
+    width: 100%;
+    padding: 5px;
+    background: transparent;
+    margin: 5px;
+    caret-color: #eec;
+    outline: none;
+    color: #eec;
+
+    &:focus {
+      border-color: #eec;
+    }
+  }
+}
+
 @media screen and (max-width: 600px) {
   .logo {
     font-size: 48pt;
-    height: 150px;
+    height: 100px;
+    padding-bottom: 7.5px;
   }
   .nav {
     gap: 0px;
