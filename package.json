@@ -9,7 +9,12 @@
   "scripts": {
     "test": "echo ok",
     "build": "esbuild public/client.ts --bundle --minify --sourcemap=inline --outfile=public/client.js",
+    "dev": "pnpm dev:build & pnpm dev:api",
+    "dev:build": "pnpm build --watch",
     "dev:api": "deno --watch --unstable-kv -A api/server.ts"
+  },
+  "dependencies": {
+    "jsx": "github:stagas/jsx"
   },
   "devDependencies": {
     "ambient-dts": "github:stagas/ambient-dts"

@@ -76,7 +76,8 @@ body {
       box-shadow: 0px 2.5px 0px #220;
 
       &.zero {
-        background: #ff74;
+        background: #665;
+        top: -3px;
       }
     }
   }
@@ -149,15 +150,17 @@ body {
     font-size: 11pt;
     font-weight: 600;
     padding: 0 5px;
+    margin-left: 5px;
   }
 
   input {
-    border: 1px solid #775;
+    border: 1.5px solid #775;
+    border-radius: 20px;
     flex: 1;
     width: 100%;
     padding: 5px;
     background: transparent;
-    margin: 5px;
+    margin: 5px 10px 5px 5px;
     caret-color: #eec;
     outline: none;
     color: #eec;
