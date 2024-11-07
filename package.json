@@ -8,9 +8,9 @@
   "main": "src/index.ts",
   "scripts": {
     "test": "echo ok",
+    "dev": "pnpm dev:api & pnpm dev:build",
     "build": "esbuild public/client.ts --bundle --minify --sourcemap=inline --outfile=public/client.js",
-    "dev": "pnpm dev:build & pnpm dev:api",
-    "dev:build": "pnpm build --watch",
+    "dev:build": "esbuild public/client.ts --bundle --minify --sourcemap=inline --outfile=public/client.js --watch",
     "dev:api": "deno --watch --unstable-kv -A api/server.ts"
   },
   "dependencies": {
